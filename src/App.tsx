@@ -1,17 +1,22 @@
-import { useState } from 'react'
 
+import { Suspense } from 'react';
 import './App.css'
 
+
+import { createRoot } from 'react-dom/client'
+import React, { useRef, useState } from 'react'
+import { Canvas, useFrame } from '@react-three/fiber'
+import MeshMaterial from './Pages/MeshBasicMaterial';
+import Points from './Pages/ParametricGeometry';
+import RippleAffect from "./Practice/RippleAffect"
+
+
 function App() {
-
-
   return (
     <div className="App">
-       
-  <h1 className="text-3xl font-bold underline">
-    Hello world! asdasd
-  </h1>
- 
+      <div >
+      <RippleAffect />
+      </div>
     </div>
   )
 }

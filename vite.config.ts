@@ -5,6 +5,9 @@ import { splitVendorChunkPlugin } from 'vite'
 const { resolve } = require('path')
 // https://vitejs.dev/config/
 export default defineConfig({
+  server:{
+    host:true
+  },
   build: {
     rollupOptions: {
       input: {
