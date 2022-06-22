@@ -12,7 +12,7 @@ function Points({ pointCount }:any) {
     attrib.current.needsUpdate = true;
   }, []);
 
-  const unhover = useCallback(e => {
+  const unhover = useCallback((e:any) => {
     attrib.current.array[e.index * 4 + 3] = 0.1;
     attrib.current.needsUpdate = true;
   }, []);
@@ -51,7 +51,7 @@ function Points({ pointCount }:any) {
         />
         <bufferAttribute
           ref={attrib}
-          attach={['attributes', 'rgba']}
+          attach='attributes-rgba'
           count={colors.length / 4}
           array={colors}
           itemSize={4}

@@ -5,6 +5,7 @@ import { splitVendorChunkPlugin } from 'vite'
 const { resolve } = require('path')
 // https://vitejs.dev/config/
 export default defineConfig({
+  base:"/VitePWAProject/",
   server:{
     host:true
   },

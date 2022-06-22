@@ -4,12 +4,12 @@ import boldUrl from './bold.json'
 import { Text3D } from '@react-three/drei'
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader'
 
-export default function Text({ children, vAlign = 'center', hAlign = 'center', size = 1.5, color = '#000000', ...props }:any) {
+export default function Text({ children, vAlign = 'center', hAlign = 'center', size = 1.5, color = '#000000', ...props }) {
   const config = useMemo(
     () => ({ size: 40, height: 30, curveSegments: 32, bevelEnabled: true, bevelThickness: 6, bevelSize: 2.5, bevelOffset: 0, bevelSegments: 8 }),
     []
   )
-  const mesh = useRef<any>()
+  const mesh = useRef()
   useLayoutEffect(() => {
     const size = new THREE.Vector3()
     mesh.current.geometry.computeBoundingBox()
